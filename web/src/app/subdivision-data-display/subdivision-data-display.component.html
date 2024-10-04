@@ -1,1 +1,24 @@
-<p>Display the subdivision data here!</p>
+<app-select-filter
+    label="subdivisionStatusCode"
+    [options]="FILTER_VALUES"
+    (selectedValue)="updateFilter($event)"
+></app-select-filter>
+<app-select-filter
+    label="Sort by"
+    [options]="SORT_VALUES"
+    (selectedValue)="updateSort($event)"
+></app-select-filter>
+
+<div *ngFor="let subdivision of page"
+      class="subdivision-details"
+>
+  <app-subdivision-display-details [subdivision]="subdivision"></app-subdivision-display-details>
+</div>
+
+<mat-paginator
+  [pageSize]="criteria.pageSize"
+  [length]="numberOfResults"
+  [pageIndex]="criteria.pageIndex"
+  [showFirstLastButtons]="true"
+  (page)="handlePagination($event)"
+></mat-paginator>
