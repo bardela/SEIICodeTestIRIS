@@ -1,0 +1,41 @@
+<div>id: {{subdivision.id}}</div>
+<div>code: {{subdivision.code}}</div>
+<div>name: {{subdivision.name}}</div>
+<div>subdivisionStatusCode: {{subdivision.subdivisionStatusCode}}</div>
+<div>nearMapImageDate: {{subdivision.nearMapImageDate}}</div>
+<button *ngIf="!expanded"
+        (click)="expanded = true">Show More
+</button>
+<ng-container *ngIf="expanded">
+  <div>longitude: {{subdivision.longitude}}</div>
+  <div>latitude: {{subdivision.latitude}}</div>
+  <div>fieldSurveyTerritoryId: {{subdivision.fieldSurveyTerritoryId}}</div>
+  <div>marketId: {{subdivision.marketId}}</div>
+  <div>subdivisionStatusId: {{subdivision.subdivisionStatusId}}</div>
+  <div>surveyMethodId: {{subdivision.surveyMethodId}}</div>
+  <div>activeSections: {{subdivision.activeSections}}</div>
+  <div>futureSections: {{subdivision.futureSections}}</div>
+  <div>builtOutSections: {{subdivision.builtOutSections}}</div>
+  <div>totalLots: {{subdivision.totalLots}}</div>
+  <div>fieldSurveyTerritoryName: {{subdivision.fieldSurveyTerritoryName}}</div>
+  <div>marketName: {{subdivision.marketName}}</div>
+  <div>marketAbbreviation: {{subdivision.marketAbbreviation}}</div>
+  <div>surveyMethodCode: {{subdivision.surveyMethodCode}}</div>
+  <div>county: {{subdivision.county}}</div>
+  <div>community: {{subdivision.community}}</div>
+  <div>zoom17Date: {{subdivision.zoom17Date}}</div>
+  <div>zoom18Date: {{subdivision.zoom18Date}}</div>
+  <div>subdivisionGeometryId: {{subdivision.subdivisionGeometryId}}</div>
+  <div>subdivisionGeometryBoundingBoxId: {{subdivision.subdivisionGeometryBoundingBoxId}}</div>
+  <div>subdivisionGeometryBoundaryId: {{subdivision.subdivisionGeometryBoundaryId}}</div>
+  <div>subdivisionGeometryIntelligenceBoundaryId: {{subdivision.subdivisionGeometryIntelligenceBoundaryId}}</div>
+  <div>subdivisionGeometryIntelligenceBoundaryStatusId: {{subdivision.subdivisionGeometryIntelligenceBoundaryStatusId}}</div>
+  <div>subdivisionGeometryIntelligenceBoundaryStatusCode: {{subdivision.subdivisionGeometryIntelligenceBoundaryStatusCode}}</div>
+  <div>subdivisionGeometryIntelligenceBoundaryStatusChangeDate: {{subdivision.subdivisionGeometryIntelligenceBoundaryStatusChangeDate}}</div>
+  <div>imageBoxId: {{subdivision.imageBoxId}}</div>
+  <div>mostRecentIPointBatchDate: {{subdivision.mostRecentIPointBatchDate}}</div>
+  <div>iPoints: {{subdivision.iPoints}}</div>
+  <div>validatediPoints: {{subdivision.validatediPoints}}</div>
+  <div>subdivisionSpecificStatus: {{subdivision.subdivisionSpecificStatus}}</div>
+  <button (click)="expanded = false">Show Less</button>
+</ng-container>
