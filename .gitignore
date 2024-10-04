@@ -132,3 +132,4 @@ dist
 /.idea/modules.xml
 /.idea/SEIICodeTestIRIS.iml
 /.idea/vcs.xml
+/web/.angular/
