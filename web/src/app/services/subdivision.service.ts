@@ -7,6 +7,7 @@ import { Injectable } from "@angular/core";
 export class SubdivisionService {
   public async getSubdivisions(criteria: any): Promise<any> {
     const results = await fetchAsJson(environment.apiUrl);
+    // The results should come from the backend, but the backend it's a mockup anyway
     const filteredResults = filterInTheFrontend(results, criteria) as [];
     const paginatedResults = paginateResultsInTheFrontEnd([...filteredResults], criteria);
 
