@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getSubdivisions } from "../services/subdivision";
+import { SubdivisionService } from "../services/subdivision.service";
 
 @Component({
   selector: 'app-subdivision-data-display',
@@ -30,14 +30,14 @@ export class SubdivisionDataDisplayComponent implements OnInit {
     sortField: '',
   } as Criteria;
 
-  constructor() { }
+  constructor(private subdivisionService: SubdivisionService) { }
 
   async ngOnInit() {
     await this.updateResults();
   }
 
   async updateResults() {
-    const [subdivisions, size] = await getSubdivisions(this.criteria);
+    const [subdivisions, size] = await this.subdivisionService.getSubdivisions(this.criteria);
     this.page = subdivisions;
     this.numberOfResults = size;
   }

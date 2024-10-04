@@ -1,11 +1,17 @@
 import { environment } from "../../environments/environment";
+import { Injectable } from "@angular/core";
 
-export async function getSubdivisions(criteria: any): Promise<any> {
-  const results = await fetchAsJson(environment.apiUrl);
-  const filteredResults = filterInTheFrontend(results, criteria) as [];
-  const paginatedResults = paginateResultsInTheFrontEnd([...filteredResults], criteria);
+@Injectable({
+  providedIn: 'root',
+})
+export class SubdivisionService {
+  public async getSubdivisions(criteria: any): Promise<any> {
+    const results = await fetchAsJson(environment.apiUrl);
+    const filteredResults = filterInTheFrontend(results, criteria) as [];
+    const paginatedResults = paginateResultsInTheFrontEnd([...filteredResults], criteria);
 
-  return [paginatedResults, filteredResults.length];
+    return [paginatedResults, filteredResults.length];
+  }
 }
 
 async function fetchAsJson(url: string) {
