@@ -8,7 +8,7 @@ import { SubdivisionService } from "../services/subdivision.service";
 })
 export class SubdivisionDataDisplayComponent implements OnInit {
 
-  readonly PAGE_SIZE = 2;
+  readonly PAGE_SIZE = 10;
   readonly FILTER_VALUES = [
     { label:'Active', value: 'Active' },
     { label: 'Future', value: 'Future' },
