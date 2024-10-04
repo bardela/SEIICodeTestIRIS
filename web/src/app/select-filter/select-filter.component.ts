@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { FormControl } from "@angular/forms";
 
 @Component({
@@ -12,7 +12,6 @@ export class SelectFilterComponent {
   filter = new FormControl();
 
   selectChange(event: any): void {
-    console.log('event:', event);
     this.selectedValue.emit(event);
   }
 }

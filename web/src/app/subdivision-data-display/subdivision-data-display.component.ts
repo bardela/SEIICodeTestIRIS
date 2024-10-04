@@ -37,9 +37,13 @@ export class SubdivisionDataDisplayComponent implements OnInit {
   }
 
   async updateResults() {
+    console.log('before updateResults');
     const [subdivisions, size] = await this.subdivisionService.getSubdivisions(this.criteria);
+    console.log('updateResults=', subdivisions);
+    console.log('size=', size);
     this.page = subdivisions;
     this.numberOfResults = size;
+    console.log('page:', this.page, 'numberOfResults:', this.numberOfResults);
   }
 
   async handlePagination(event: any) {

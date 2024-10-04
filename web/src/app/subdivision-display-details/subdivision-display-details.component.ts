@@ -1,13 +1,10 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: 'app-subdivision-display-details',
   templateUrl: './subdivision-display-details.component.html',
 })
-export class SubdivisionDisplayDetailsComponent implements OnInit {
+export class SubdivisionDisplayDetailsComponent {
   @Input() subdivision: any;
   expanded = false;
-
-  ngOnInit(): void {
-  }
 }
